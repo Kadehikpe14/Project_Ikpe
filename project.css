@@ -38,6 +38,7 @@ body {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 /* Style the topnav links */
@@ -52,6 +53,10 @@ body {
 
 /* Change color on hover */
 .topnav a:hover {
+    background-color: #ddd;
+    color: gray;
+}
+.topnav a.active {
     background-color: #ddd;
     color: gray;
 }
@@ -78,11 +83,28 @@ body {
     padding: 20px;
 }
 
+.profile-photo {
+    background-image: url("images/permit.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 /* Add a card effect for articles */
 .card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+}
+
+.w3-half img {
+
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.8;
+    cursor:pointer;
+}
+.w3-half img:hover {
+    opacity: 1
 }
 
 /* Clear floats after the columns */

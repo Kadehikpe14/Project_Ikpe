@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="project.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="project.css"></script>
 </head>
@@ -13,43 +14,47 @@
 
 
 <div id="container">
-	<div class="header">
-  <h1>Kadeh Ikpe</h1>
-  <p>Uprising Senior at Chespeake High School</p>
-</div>
+ <header class="header">
+    <h1>Kadeh Ikpe</h1>
+    <p>Uprising Senior at Chespeake High School</p>
+  </header>
+
 
 <div class="topnav">
   <a href="index.html">Home</a>
   <a href="about.html">About Me</a>
-  <a href="gallery.html">Photo Gallery</a>
+  <a href="gallery.html" class="active">Photo Gallery</a>
   <a href="contact.html" style="float:right">Contact</a>
 </div>
 
-
 <div class="row">
-  <div class="leftcolumn">
-    <div class="card">
+      <div class="card">
+      <!-- Photo grid (modal) -->
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <img src="images/permitTest.jpg" style="width:100%" onclick="onClick(this)" alt="This is how the permit test is written.">
+          <img src="images/sixFlags.jpg" style="width:100%" onclick="onClick(this)" alt="Six Flags America! Located in Bowie, Maryland, with over hundreds of rides and attradctions!">
+          <img src="images/nigeria.jpg" style="width:100%" onclick="onClick(this)" alt="Nigeria, my beautiful green country. The origin of my parents and the culture I represent.">
+          <img src="images/gd.jpg" style="width:100%" onclick="onClick(this)" alt="I want to be a game designer/developer.">
+        </div>
 
-    </div>
+        <div class="w3-half">
+          <img src="images/ubound.jpg" style="width:100%" onclick="onClick(this)" alt="Classic Upward Bound. I joined this program fall of 2017 and been it in since. I have made new friends and met old friends in this program. And it has helped me a lot with my classwork during the school year and much more!">
+          <img src="images/chs.jpg" style="width:100%" onclick="onClick(this)" alt="Chesapeake high school. Home of the Bayhawks!">
+          <img src="images/bball.jpg" style="width:100%" onclick="onClick(this)" alt="The Girls' Basketball team. The Bayhawks!">
+        </div>
+      </div>
+
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+          <img id="img01" class="w3-image">
+          <p id="caption"></p>
+        </div>
+      </div>
+      </div>
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Kadeh</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Hi! My name is Kadeh. I'm 16 years old, I'm going to a senior this upcoming school year(Class of 2019)! Also I'm trying to major in game development and need to understand the language C#. I'm excited to see where my life takes me.</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Profile Picture</p></div>
-      <div class="fakeimg"><p>Picture of Family</p></div>
-      <div class="fakeimg"><p>Another picture of me</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me on my Social Medias!</h3>
-      <p>Instagram: Kadeh__     Snapchat: Kadehikpe </p>
-    </div>
-  </div>
-</div>
 
 <div class="footer">
   <h2>This is my Website!</h2>
@@ -57,6 +62,23 @@
 
 
 </div>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("myOverlay").style.display = "none";
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
 
 </body>
 </html>
