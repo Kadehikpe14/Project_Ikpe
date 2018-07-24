@@ -29,6 +29,8 @@ body {
 
 .header h1 {
     font-size: 50px;
+    position: sticky;
+    top: : 0;
 }
 
 /* Style the top navigation bar */
@@ -76,15 +78,42 @@ body {
     padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-    background-color: #aaa;
+/* Home images */
+.img1 {
+    background-image: url("images/profile.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding: 20px;
+}
+.img2 {
+    background-image: url("images/profile.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding: 20px;
+}
+.img3 {
+    background-image: url("images/profile.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 100%;
     padding: 20px;
 }
 
+.six-flags{
+    background-image: url("images/sixFlags.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.permit{
+    background-image: url("images/permitTest.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .profile-photo {
-    background-image: url("images/permit.jpg");
+    background-image: url("images/profile.jpg");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -114,6 +143,9 @@ body {
     clear: both;
 }
 
+.content {
+    min-height: calc(100vh - 40vh);
+}
 /* Footer */
 .footer {
     padding: 20px;
